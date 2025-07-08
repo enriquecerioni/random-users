@@ -44,7 +44,7 @@ function App() {
 
     if ( sorting === SortBy.NONE ) return filteredUsers
 
-    const compareProperties: Record<string, (user: User) => any> = {
+    const compareProperties: Record<string, (user: User) => string> = {
       [SortBy.COUNTRY]: user => user.location.country,
       [SortBy.NAME]: user => user.name.first,
       [SortBy.LAST]: user => user.name.last,
@@ -75,7 +75,7 @@ function App() {
 
   return (
     <>
-      <h1>Technical Interview</h1>
+      <h1>Users List</h1>
       <header>
         <button onClick={toggleColors}>
           {paintTitle}
@@ -95,7 +95,7 @@ function App() {
       </header>
       <main>
         <UsersList
-          changeSorting={ handleChangeSort} 
+          changeSorting={ handleChangeSort } 
           handleDelete={ handleDelete } 
           showColors={ showColors } 
           users={ sortedUsers } />

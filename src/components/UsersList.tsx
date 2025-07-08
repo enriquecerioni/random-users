@@ -24,7 +24,7 @@ export function UsersList({ changeSorting, handleDelete, showColors, users }: Pr
                         const color = showColors ? backgroundColor : 'transparent'
 
                         return (
-                            <tr key={user.login.uuid} style={{ backgroundColor: color }}>
+                            <tr key={user.email} style={{ backgroundColor: color }}>
                                 <td>
                                     <img src={user.picture.thumbnail} />
                                 </td>
