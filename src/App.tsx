@@ -25,7 +25,7 @@ function App() {
   }
 
   const handleDelete = (index: number) => {
-    const filteredUsers = users.filter((user, userIndex) => userIndex !== index)
+    const filteredUsers = users.filter((_user, userIndex) => userIndex !== index)
     setUsers(filteredUsers)
   }
 
